@@ -13,6 +13,7 @@ The project demonstrates the full IoT workflow:
 🔁 Two-way communication between frontend and ESP32
 
 **🔧 Technologies Used**
+
 🖥 Hardware / IoT
 
 ESP32
@@ -46,6 +47,7 @@ CafeRadar-IoT/
 └── esp32/          # ESP32 Arduino source code
 
 **⚙️ How It Works**
+
 1️⃣ ESP32 → Backend
 
 ESP32 reads sensor data every few seconds and sends JSON:
