@@ -1,0 +1,24 @@
+.main-header{
+  padding: 1rem 2rem;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-container h1 {
+  font-family: 'Franklin Gothic Medium';
+  font-family: fantasy;
+  font-size: 28px;
+  color: #FF8A00;   
+  margin: 0;
+  padding: 0;
+}

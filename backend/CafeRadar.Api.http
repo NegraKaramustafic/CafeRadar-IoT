@@ -1,0 +1,6 @@
+@CafeRadar.Api_HostAddress = http://localhost:5072
+
+GET {{CafeRadar.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

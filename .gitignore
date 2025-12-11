@@ -1,0 +1,79 @@
+###############################################
+# GLOBAL PROJECT IGNORE (Angular + .NET + ESP32)
+###############################################
+
+###############
+# FRONTEND (Angular)
+###############
+dist/
+tmp/
+out-tsc/
+bazel-out/
+
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Angular cache
+.angular/
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Misc
+.history/
+typings/
+__screenshots__/
+.DS_Store
+Thumbs.db
+
+###############
+# BACKEND (.NET)
+###############
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+
+# EF Core auto-generated designer files
+*Migrations/*Designer.cs
+
+# Logs
+logs/
+*.log
+
+###############
+# ESP32 / Arduino
+###############
+*.bin
+*.elf
+*.hex
+
+# Arduino build output (if used)
+build/
+.arduino-build/
+.arduino/
+
+###############
+# ENV FILES
+###############
+.env
+.env.*
+
+###############
+# Yarn 3
+###############
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

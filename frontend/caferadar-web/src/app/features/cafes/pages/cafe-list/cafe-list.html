@@ -1,0 +1,77 @@
+<section class ="hero">
+  <div class ="hero-container">
+  <h2><b>Discover cafes with the vibe you need</b></h2>
+   <p> Whether you want a quiet place to study or a bright spot to enjoy your coffee,
+   CafeRadar helps you find cafes with the perfect atmosphere in real time.</p>
+</div>
+</section>
+<section class="filters">
+  <button
+    class="filter-btn"
+    [ngClass]="{ active: selectedFilter === 'study' }"
+    (click)="setFilter('study')"
+  >
+    Study & focus
+  </button>
+
+  <button
+    class="filter-btn"
+    [ngClass]="{ active: selectedFilter === 'coffee' }"
+    (click)="setFilter('coffee')"
+  >
+    Bright coffee spot
+  </button>
+
+  <button
+    class="filter-btn"
+    [ngClass]="{ active: selectedFilter === 'night' }"
+    (click)="setFilter('night')"
+  >
+    Night out
+  </button>
+
+  <button
+    class="filter-btn"
+    [ngClass]="{ active: selectedFilter === 'reset' }"
+    (click)="setFilter('reset')"
+  >
+    Show all
+  </button>
+  <button
+    class="filter-btn"
+    (click)="triggerDisplay()"
+  >
+    Display status on ESP device
+  </button>
+</section>
+
+
+
+
+<div *ngIf="!loading && cafes.length === 0">
+   No cafes available.
+</div>
+
+<div class="cafe-list">
+<div *ngFor="let c of filteredCafes" class="cafe-item">
+      <img [src]="c.imageUrl" [alt]="c.name" class="cafe-image"/>
+  <h2>{{ c.name }}</h2>
+  <p>{{ c.address }}</p>
+  <p>{{ c.description }}</p>
+
+  <p>
+    Noise level:
+    <strong>{{ c.noiseLevel }}</strong>
+  </p>
+
+  <p>
+    Light level:
+    <strong>{{ c.lightLevel }}</strong>
+  </p>
+
+  <p>
+    Last measured:
+    <strong>{{ c.measuredAtUtc | date:'dd.MM.yyyy HH:mm' }}</strong>
+  </p>
+</div>
+</div>
